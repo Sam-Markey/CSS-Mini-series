@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+/* flex-direction: column; */
+ justify-content:flex-start ;/* Aligns everything on the main axis*/
+ align-items: stretch;/*Aligns on the cross axis*/
+ gap: 1rem;
+
+
+  /* align-content: stretch;  Only works when flex wrap is enabled */
+  & .container__item {
+    flex: 1 0 100px;
+   
+    /* overflow: hidden; */
+
+&.item-1{
+/* flex-grow: 2; */
+}
+&.item-2{
+  
+  
+}
+&.item-3{
+
+  
+}
+&.item-4{
+ 
+  
+}
+ 
+    /* &:nth-child(odd){
+      flex: 1;
+    } */
+  }
+}
+
