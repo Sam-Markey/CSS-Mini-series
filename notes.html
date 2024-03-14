@@ -819,7 +819,7 @@ hue-6-2: #e6c07b
 <li>Introduce Flex
 <ol>
 <li>What is flexbox? Flexbox allows you to essentially easily align elements on a single axis.</li>
-<li>Although you can align elements on a single axis flex has 2 imaginary axes. <strong>The MAIN AXIS</strong> (horizontal by default) and the <strong>CROSS AXIS</strong> (vertical by default)</li>
+<li>Although you can align elements on a single axis <strong>flex</strong> has 2 imaginary axes. <strong>The MAIN AXIS</strong> (horizontal by default) and the <strong>CROSS AXIS</strong> (vertical by default)</li>
 </ol>
 </li>
 <li>Start writing flex <code>display:flex</code></li>
@@ -829,12 +829,18 @@ hue-6-2: #e6c07b
 <li>
 <p>Talk about <code>Justify Content</code> (controls the <code>MAIN AXIS</code>) and <code>align-items</code> (controls the <code>CROSS AXIS</code>)</p>
 <ol>
-<li>
-<p>Justify-content: 1. <code>flex-start:</code> Items align to the start of the container. 2. <code>flex-end:</code> Items align to the end of the container. 3. <code>center:</code> Items align at the center of the container. 4. <code>space-between:</code> Items display with equal spacing between them, with the first item aligned to the start and the last item aligned to the end. 5. <code>space-around:</code> Items display with equal spacing around them, distributing space evenly so that there is half as much space before the first item and after the last item as between items. 6. <code>space-evenly:</code> Items display with equal spacing around them, distributing space evenly so that there is an equal amount of space between each item, as well as before the first and after the last item.
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg"/></p>
+<li>Justify-content:
+<ol>
+<li><code>flex-start:</code> Items align to the start of the container.</li>
+<li><code>flex-end:</code> Items align to the end of the container.</li>
+<li><code>center:</code> Items align at the center of the container.</li>
+<li><code>space-between:</code> Items display with equal spacing between them, with the first item aligned to the start and the last item aligned to the end.</li>
+<li><code>space-around:</code> Items display with equal spacing around them, distributing space evenly so that there is half as much space before the first item and after the last item as between items.</li>
+<li><code>space-evenly:</code> Items display with equal spacing around them, distributing space evenly so that there is an equal amount of space between each item, as well as before the first and after the last item.
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg"/></li>
+</ol>
 </li>
-<li>
-<p>Align-items:</p>
+<li>Align-items:
 <ol>
 <li><strong>flex-start</strong>: Items align to the start of the cross axis of the container.</li>
 <li><strong>flex-end</strong>: Items align to the end of the cross axis of the container.</li>
@@ -852,7 +858,8 @@ hue-6-2: #e6c07b
 <li><code>flex-wrap</code>: By default flex will try and fit everything in one line. You can change that to allow items to wrap as needed. e.g. overflowing content.
 <ol>
 <li>Talk about <code>reverse-wrap</code></li>
-<li>When wrapping is enabled you can use <strong><code>align-content</code></strong>. This will align the flex containers lines within when there is extra space in the <code>CROSS-AXIS</code> similar to how justify content aligns individual items within the <code>MAIN axis</code></li>
+<li>When wrapping is enabled you can use <strong><code>align-content</code></strong>. This will align the flex containers lines within when there is extra space in the <code>CROSS-AXIS</code> similar to how justify content aligns individual items within the <code>MAIN axis</code>
+<ol>
 <li><code>normal</code> (default): items are packed in their default position as if no value was set.</li>
 <li><code>flex-start</code> / <code>start</code>: items packed to the start of the container. The (more supported) flex-start honors the flex-direction while start honors the writing-mode direction.</li>
 <li><code>flex-end</code> / <code>end</code>: items packed to the end of the container. The (more support) flex-end honors the flex-direction while end honors the writing-mode direction.</li>
@@ -864,6 +871,8 @@ hue-6-2: #e6c07b
 <li><code>row-gap</code>: sets spacing between items vertically</li>
 <li><code>column-gap</code>: sets spacing between items horizontally
 <img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg"/></li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
@@ -887,13 +896,14 @@ hue-6-2: #e6c07b
 <p><code>flex-basis</code>:</p>
 <ol>
 <li>Sets the default size of a element before remaining space is distributed. Overwrites height or width.</li>
-<li><img src="file:///c:\git\CSS-Mini-series\image-2.png" alt="alt text">
-<ol>
-<li><code>flex:</code> shorthand <code>flex-grow | flex-shrink | flex-basis</code></li>
-<li><code>align-self</code> - Overrides align-items for the specific child element selected.</li>
+<li><img src="file:///c:\git\CSS-Mini-series\image-2.png" alt="alt text"></li>
 </ol>
 </li>
-</ol>
+<li>
+<p><code>flex:</code> shorthand <code>flex-grow | flex-shrink | flex-basis</code></p>
+</li>
+<li>
+<p><code>align-self</code> - Overrides align-items for the specific child element selected.</p>
 </li>
 <li>
 <p><code>order</code>: By default the order of the elements are by how they are ordered in the HTML. However with flex you can override this using the <code>order</code> property.</p>
